@@ -34,21 +34,28 @@ p, h1, h2, h3, ul, li{
 
 h1, h2, h3{
 	.HeadFont();
+	text-align: center;
 }
 
 h1{
 	font-size: 1.5 * @textSize;
-	line-height: 1.65 * @textSize;
+	line-height: 1.75 * @textSize;
 }
 
 h2{
 	font-size: 1.25 * @textSize;
-	line-height: 1.4 * @textSize;
+	line-height: 1.5 * @textSize;
 }
 
 h2{
 	font-size: 1.1 * @textSize;
+	line-height: 1.35 * @textSize;
+}
+
+p{
+	font-size: 1.0 * @textSize;
 	line-height: 1.25 * @textSize;
+	text-align: center;
 }
 
 /*--------------------------------------------*/
@@ -73,7 +80,13 @@ html{
 /*--------------------------------------------*/
 
 div#logo{
+
 	background: @mainColor;
+
+	img{
+		height: 50vh;
+	}
+
 }
 
 /*--------------------------------------------*/
