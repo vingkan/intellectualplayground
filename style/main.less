@@ -1,0 +1,127 @@
+/*--------------------------------------------*/
+/*---> COLORS <-------------------------------*/
+/*--------------------------------------------*/
+
+@mainColor: #19e577;
+@mainLight: @mainColor + #222222;
+@mainDark: @mainColor - #222222;
+
+@charcoal: #1a1a1a;
+
+/*--------------------------------------------*/
+/*---> FONTS <--------------------------------*/
+/*--------------------------------------------*/
+
+@AlfaSlabOne: 'Alfa Slab One', sans-serif;
+@SourceSansPro: 'Source Sans Pro', sans-serif;
+@smallFont: 5vh;
+
+/*--------------------------------------------*/
+/*---> TEXT <---------------------------------*/
+/*--------------------------------------------*/
+
+h1{
+	font-family: @AlfaSlabOne;
+	text-align: center;
+	font-size: 1.75 * @smallFont;
+	line-height: 2.0 * @smallFont;
+	color: rgba(255, 255, 255, 1.0);
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	text-transform: uppercase;
+}
+
+h2{
+	font-family: @AlfaSlabOne;
+	text-align: center;
+	font-size: 1.15 * @smallFont;
+	color: @scarletRed;
+}
+
+p{
+	width: 90%;
+	margin: 5vw;
+	text-align: center;
+	font-size: 0.9 * @smallFont;
+	line-height: @smallFont * 1.5;
+}
+
+/*--------------------------------------------*/
+/*---> BODY <---------------------------------*/
+/*--------------------------------------------*/
+
+html{
+	background: @surfaceGray;
+	//Default Text Styles
+	font-family: @SourceSansPro;
+	font-size: @smallFont;
+	color: @charcoal;
+}
+
+.AnimateAll(@time: 0.5s){
+	transition: all @time ease;
+	-webkit-transition: all @time ease;
+}
+
+/*--------------------------------------------*/
+/*---> STRUCTURE <----------------------------*/
+/*--------------------------------------------*/
+
+
+
+/*--------------------------------------------*/
+/*---> HEADER & FOOTER <----------------------*/
+/*--------------------------------------------*/
+
+
+
+/*--------------------------------------------*/
+/*---> FORM <----------------------------------*/
+/*--------------------------------------------*/
+
+input, button, select{
+	outline: none;
+	border: none;
+}
+
+/*--------------------------------------------*/
+/*---> SCROLLBAR <----------------------------*/
+/*--------------------------------------------*/
+
+@scrollBar: white;
+@scrollBarBack: @mainColor;
+
+::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+	background: @scrollBarBack;
+	z-index: 50;
+}
+
+::-webkit-scrollbar-button{
+	background: @scrollBarBack;
+}
+
+::-webkit-scrollbar-track{
+	background: @scrollBarBack;
+}
+
+::-webkit-scrollbar-track-piece{
+	background: @scrollBarBack;
+}
+
+::-webkit-scrollbar-thumb{
+	background: @scrollBar;
+	//border-radius: 5px;
+	position: absolute;
+	margin-left: -10px;
+}
+
+::-webkit-scrollbar-corner{
+	width: 10px;
+	height: 10px;
+	background: @scrollBarBack;
+}
+
+::-webkit-resizer{
+	background: @scrollBarBack;
+}
