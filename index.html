@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Graph API: AGC Parents Connect</title>
-		<!--<link rel="stylesheet" type="text/css" href="style/reset.css">
-		<script type="text/javascript" src="style/less-1.5.0.min.js"></script>-->
+		<title>MobiHack</title>
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<link rel="icon" type="img/png" href="style/favicon.png" style="width:30px;">
+		<!-- IMPORTED SCRIPTS -->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Karla:400,700,400italic' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<style type="text/css">
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<link href='http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple' rel='stylesheet' type='text/css'>
+		<style>
 
-			/* STYLE */
 
 		</style>
 	</head>
+
 	<body>
 
-		<script>
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '629230393881609',
-		      xfbml      : true,
-		      version    : 'v2.4'
-		    });
-		  };
+		<center><div id="container">
 
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "https://connect.facebook.net/en_US/sdk.js";
-		     //js.src = "C:\Users\Vinesh Kannan\Documents\GitHub\agc-ipro/fb-sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-		</script>
+			<img src="style/smalllogo.png"><br>
 
-		<h1>Facebook Graph API: AGC Parents Connect</h1>
+			<input type="text" id="roomKeyInput" value="">
+
+			<button onclick="globalStart();">Record</button>
+
+			<!--<button onclick="setRoomKey();">Join</button>
+			<button id="start" onclick="initListening(true);">Start</button>
+			<button id="stop" onclick="initListening(false);">Stop</button>
+			<button id="resuls" onclick="endSession();">Results</button>-->
+
+			<!--<input x-webkit-speech>-->
+			<div id="interim-transcript">
+				<p>transcription will be output here</p>
+			</div>
+
+			<button onclick="globalStop();">Stop</button>
+
+			<div id="output"></div>
+
+		</div></center>
+
+		
+		<!-- STACK SCRIPTS -->
+		<!-- Remeber that you have to load the stack backwards -->
+		<script type="text/javascript" src="script/backend.js"></script>
+		<script type="text/javascript" src="script/application.js"></script>
+		<script type="text/javascript" src="script/frontend.js"></script>
 
 		<script type="text/javascript">
-
-			// SCRIPT
-
+	/*	setRoomKey();
+		endSession();*/
+			console.log("LOADED MAIN");
 		</script>
-
+		
 	</body>
 </html>
