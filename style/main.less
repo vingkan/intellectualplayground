@@ -12,37 +12,43 @@
 /*---> FONTS <--------------------------------*/
 /*--------------------------------------------*/
 
-@AlfaSlabOne: 'Alfa Slab One', sans-serif;
+@Arvo: 'Arvo', sans-serif;
 @SourceSansPro: 'Source Sans Pro', sans-serif;
-@smallFont: 5vh;
+@textSize: 5vh;
+
+.HeadFont(){
+	font-family: @Arvo;
+}
+
+.BodyFont(){
+	font-family: @SourceSansPro;
+}
 
 /*--------------------------------------------*/
 /*---> TEXT <---------------------------------*/
 /*--------------------------------------------*/
 
+p, h1, h2, h3, ul, li{
+	.BodyFont();
+}
+
+h1, h2, h3{
+	.HeadFont();
+}
+
 h1{
-	font-family: @AlfaSlabOne;
-	text-align: center;
-	font-size: 1.75 * @smallFont;
-	line-height: 2.0 * @smallFont;
-	color: rgba(255, 255, 255, 1.0);
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
-	text-transform: uppercase;
+	font-size: 1.5 * @textSize;
+	line-height: 1.65 * @textSize;
 }
 
 h2{
-	font-family: @AlfaSlabOne;
-	text-align: center;
-	font-size: 1.15 * @smallFont;
-	color: @scarletRed;
+	font-size: 1.25 * @textSize;
+	line-height: 1.4 * @textSize;
 }
 
-p{
-	width: 90%;
-	margin: 5vw;
-	text-align: center;
-	font-size: 0.9 * @smallFont;
-	line-height: @smallFont * 1.5;
+h2{
+	font-size: 1.1 * @textSize;
+	line-height: 1.25 * @textSize;
 }
 
 /*--------------------------------------------*/
@@ -52,8 +58,8 @@ p{
 html{
 	background: @surfaceGray;
 	//Default Text Styles
-	font-family: @SourceSansPro;
-	font-size: @smallFont;
+	.BodyFont();
+	font-size: @textSize;
 	color: @charcoal;
 }
 
