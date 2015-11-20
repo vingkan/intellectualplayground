@@ -15,6 +15,7 @@
 		<style>
 
 
+
 		</style>
 	</head>
 
@@ -27,6 +28,11 @@
 				</center>
 			</div>
 			<div class="section">
+				<div id="aleins">
+					<img src="style/img/aliens/4">
+					<img src="style/img/aliens/7">
+					<img src="style/img/aliens/12">
+				</div>
 				<h1>Launching 11.20.2015.</h1>
 				<p>Illinois Institute of Technology</p>
 			</div>
@@ -37,6 +43,15 @@
 			$(document).ready(function(){
 				$('#fullpage').fullpage();
 			});
+
+			function isScrolledIntoView(elem){
+				var element = $(elem);
+				var viewTop = $(window).scrollTop();
+				var viewBottom = viewTop + $(window).height();
+				var elementTop = element.offset().top;
+				var elementBottom = elementTop + element.height();
+				return ((elementBottom <= viewBottom) && (elementTop >= viewTop));
+			}
 
 			console.log("LOADED MAIN");
 
