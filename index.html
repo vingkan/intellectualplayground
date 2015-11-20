@@ -8,8 +8,8 @@
 		<!-- IMPORTED SCRIPTS -->
 		<link href='https://fonts.googleapis.com/css?family=Arvo:400,700|Source+Sans+Pro:400,400italic,600' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 		<!-- FULLPAGE.JS -->
+		<script type="text/javascript" src="style/viewportchecker.js"></script>
 		<link rel="stylesheet" type="text/css" href="style/fullpagestylemin.css"/>
 		<script type="text/javascript" src="style/fullpagescriptmin.js"></script>
 		<style>
@@ -60,6 +60,11 @@
 				var elementBottom = elementTop + element.height();
 				return ((elementBottom <= viewBottom) && (elementTop >= viewTop));
 			}
+
+			$(window).scroll(function(){
+				console.log('SCROLL!');
+				alert(4324)
+			});
 
 			console.log("LOADED MAIN");
 
