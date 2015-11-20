@@ -13,7 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="style/fullpagestylemin.css"/>
 		<script type="text/javascript" src="style/fullpagescriptmin.js"></script>
 		<style>
-
+		
 
 
 		</style>
@@ -29,9 +29,9 @@
 			</div>
 			<div class="section" id="aliens">
 				<center>
-					<img class="aliens" src="style/img/aliens/4.png">
-					<img class="aliens" src="style/img/aliens/7.png">
-					<img class="aliens" src="style/img/aliens/12.png">
+					<img class="alien" src="style/img/aliens/4.png">
+					<img class="alien" src="style/img/aliens/7.png">
+					<img class="alien" src="style/img/aliens/12.png">
 				</center>
 				<h1>Launching 11.20.2015.</h1>
 				<p>Illinois Institute of Technology</p>
@@ -50,20 +50,6 @@
 
 			$(document).ready(function(){
 				$('#fullpage').fullpage();
-			});
-
-			function isScrolledIntoView(elem){
-				var element = $(elem);
-				var viewTop = $(window).scrollTop();
-				var viewBottom = viewTop + $(window).height();
-				var elementTop = element.offset().top;
-				var elementBottom = elementTop + element.height();
-				return ((elementBottom <= viewBottom) && (elementTop >= viewTop));
-			}
-
-			$(window).scroll(function(){
-				console.log('SCROLL!');
-				alert(4324)
 			});
 
 			console.log("LOADED MAIN");
