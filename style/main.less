@@ -8,6 +8,7 @@
 
 @charcoal: #1a1a1a;
 @alienPurple: #784EAA;
+@astroBlue: #2b83d5;
 
 /*--------------------------------------------*/
 /*---> FONTS <--------------------------------*/
@@ -38,6 +39,7 @@ p, h1, h2, h3, ul, li{
 h1, h2, h3{
 	.HeadFont();
 	text-align: center;
+	font-weight: bold;
 }
 
 h1{
@@ -103,6 +105,13 @@ html{
 /*---> STRUCTURE <----------------------------*/
 /*--------------------------------------------*/
 
+.AlienSquares(@size: 75%){
+	background-image: url('img/background/trans-alien-squares.png');
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: @size;
+}
+
 img.spotlight{
 	width: 90vw;
 	margin: (0.75 * @textSize) auto;
@@ -116,6 +125,12 @@ div#logo{
 		height: 50vh;
 	}
 
+}
+
+div#problem{
+	background: @alienPurple;
+	.AlienSquares();
+	color: white;
 }
 
 div#aliens{
