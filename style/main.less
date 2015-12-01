@@ -32,6 +32,7 @@
 p, h1, h2, h3, ul, li{
 	.BodyFont();
 	margin: (0.5 * @textSize) auto;
+	.PartiallyFilled();
 }
 
 h1, h2, h3{
@@ -72,6 +73,11 @@ li{
 	margin: (0.15 * @textSize) auto;
 }
 
+span.bold{
+	font-weight: bold;
+	color: @mainColor;
+}
+
 /*--------------------------------------------*/
 /*---> BODY <---------------------------------*/
 /*--------------------------------------------*/
@@ -84,6 +90,10 @@ html{
 	color: @charcoal;
 }
 
+.PartiallyFilled(){
+	width: 90%;
+}
+
 .AnimateAll(@time: 0.5s){
 	transition: all @time ease;
 	-webkit-transition: all @time ease;
@@ -92,6 +102,10 @@ html{
 /*--------------------------------------------*/
 /*---> STRUCTURE <----------------------------*/
 /*--------------------------------------------*/
+
+img.spotlight{
+	height: 30vh;
+}
 
 div#logo{
 
