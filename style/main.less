@@ -131,6 +131,12 @@ img.spotlight{
 	margin: (0.75 * @textSize) auto;
 }
 
+/*
+ * Examples of Alternate Mixins:
+ * .PhotoCoverBar(@charcoal, 5vw); (Standard, Left Align)
+ * .PhotoCoverBar(@astroBlue, 35vw); (Right Align)
+ * .PhotoCoverBar(@charcoal, 20vw); (Center Align)
+*/
 .PhotoCoverBar(@color: @charcoal, @left: 5vw){
 
 	background: rgba(255, 255, 255, 0.8);
@@ -192,8 +198,7 @@ div#solution{
 	.FillBackgroundImage();
 
 	div.photo-cover{
-		//.PhotoCoverBar(@charcoal, 5vw);
-		.PhotoCoverBar(@astroBlue, 35vw);
+		.PhotoCoverBar(@charcoal, 20vw);
 	}
 
 }
