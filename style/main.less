@@ -110,6 +110,15 @@ html{
 	margin: (0.75 * @textSize) auto;
 }
 
+.FillBackgroundImage(){
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .AlienSquares(@size: 75%){
 	background-image: url('img/background/trans-alien-squares.png');
 	background-position: center center;
@@ -122,6 +131,17 @@ img.spotlight{
 	margin: (0.75 * @textSize) auto;
 }
 
+div.photo-cover{
+	position: absolute;
+	background: white;
+	border-top: 2.5vh solid @charcoal;
+	width: 60vw;
+	bottom: 0;
+	padding-bottom: 2.5vw;
+	margin-left: 5vw;
+	color: @charcoal;
+}
+
 div#logo{
 
 	background: @mainColor;
@@ -132,12 +152,6 @@ div#logo{
 
 }
 
-div#problem{
-	background: @astroBlue;
-	.AlienSquares();
-	color: white;
-}
-
 div#aliens{
 
 	img{
@@ -145,6 +159,19 @@ div#aliens{
 		margin: 1vh;
 	}
 
+}
+
+div#problem{
+	background: @astroBlue;
+	.AlienSquares();
+	color: white;
+}
+
+div#solution{
+	//background: @mainColor;
+	//.AlienSquares(20%);
+	background: url('img/background/agc-woodchips.jpg');
+	.FillBackgroundImage();
 }
 
 div#contact{
