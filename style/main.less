@@ -131,15 +131,33 @@ img.spotlight{
 	margin: (0.75 * @textSize) auto;
 }
 
+.PhotoCoverBar(@color: @charcoal, @left: 5vw){
+
+	background: rgba(255, 255, 255, 0.8);
+	border-top: 2.5vh solid @color;
+	width: 60vw;
+	margin-left: @left;
+	color: @color;
+
+	&:hover{
+		background: rgba(255, 255, 255, 1.0);
+	}
+
+	.AnimateAll();
+
+}
+
 div.photo-cover{
+
 	position: absolute;
-	background: white;
+	background: rgba(255, 255, 255, 0.8);
 	border-top: 2.5vh solid @charcoal;
 	width: 60vw;
 	bottom: 0;
 	padding-bottom: 2.5vw;
 	margin-left: 5vw;
 	color: @charcoal;
+
 }
 
 div#logo{
@@ -172,6 +190,12 @@ div#solution{
 	//.AlienSquares(20%);
 	background: url('img/background/agc-woodchips.jpg');
 	.FillBackgroundImage();
+
+	div.photo-cover{
+		//.PhotoCoverBar(@charcoal, 5vw);
+		.PhotoCoverBar(@astroBlue, 35vw);
+	}
+
 }
 
 div#contact{
