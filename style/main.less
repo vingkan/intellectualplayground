@@ -137,11 +137,11 @@ img.spotlight{
  * .PhotoCoverBar(@astroBlue, 35vw); (Right Align)
  * .PhotoCoverBar(@charcoal, 20vw); (Center Align)
 */
-.PhotoCoverBar(@color: @charcoal, @left: 5vw){
+.PhotoCoverBar(@color: @charcoal, @left: 5vw, @width: 60vw){
 
 	background: rgba(255, 255, 255, 0.8);
 	border-top: 2.5vh solid @color;
-	width: 60vw;
+	width: @width;
 	margin-left: @left;
 	color: @color;
 
@@ -158,7 +158,6 @@ div.photo-cover{
 	position: absolute;
 	background: rgba(255, 255, 255, 0.8);
 	border-top: 2.5vh solid @charcoal;
-	width: 60vw;
 	bottom: 0;
 	padding-bottom: 2.5vw;
 	margin-left: 5vw;
@@ -192,13 +191,49 @@ div#problem{
 }
 
 div#solution{
-	//background: @mainColor;
-	//.AlienSquares(20%);
+
 	background: url('img/background/agc-woodchips.jpg');
 	.FillBackgroundImage();
 
 	div.photo-cover{
 		.PhotoCoverBar(@charcoal, 20vw);
+	}
+
+}
+
+div#imagine-users{
+
+	background: @alienPurple;
+	.AlienSquares();
+	color: white;
+
+	div.profile{
+
+		img{
+			width: 35vw;
+		}
+
+		h3{
+			font-size: 1.1 * @textSize;
+			line-height: 1.35 * @textSize;
+		}
+
+	}
+
+}
+
+div#user-narrative-1{
+	background: url('img/background/agc-kids-laptop.jpg');
+	.FillBackgroundImage();
+}
+
+div#user-narrative-2{
+
+	background: @mainColor;
+	.AlienSquares();
+
+	div.photo-cover{
+		.PhotoCoverBar(@charcoal, 10vw, 80vw);
 	}
 
 }
