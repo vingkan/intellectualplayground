@@ -40,6 +40,7 @@ h1, h2, h3{
 	.HeadFont();
 	text-align: center;
 	font-weight: bold;
+	clear: both;
 }
 
 h1{
@@ -155,10 +156,12 @@ div#contact{
 div.profile{
 
 	display: inline-block;
+	//float: left;
 
 	img{
-		width: 20vw;
-		.GlobalMargin()
+		width: 15vw;
+		margin: (0.75 * @textSize) 2vw;
+		border-radius: 50%;
 	}
 
 }
